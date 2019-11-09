@@ -1,0 +1,67 @@
+@import "bootstrap";
+
+#logo {
+	font-weight: bold;
+	float: left;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.7em;
+	color: white;
+	letter-spacing: -1px;
+}
+
+.center {
+	text-align: center
+}
+
+.jumbotron {
+	margin-top: 100px;
+	background-image: asset-url('download.jpeg');
+	background-size: cover;
+	height: 700px;
+}
+
+.btn-xlarge {
+	text-align: center;
+	margin-top: 40px;
+	background-color: darkgreen;
+	border-color: darkgreen;
+	font-size: 1.7em;
+}
+
+.btn-xlarge:hover {
+	background-color: lightgreen;
+	border-color: lightgreen;
+}
+
+.background {
+	background-color: black;
+}
+
+.footer-background {
+	background-color: grey;
+}
+
+.footer {
+  padding: 10px 0;
+  margin-top: 120px;
+  height: 60px;
+}
+.footer a {
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: #70726F;
+}
+
+.about-link:hover {
+	text-decoration: none;
+	color: white;
+}
