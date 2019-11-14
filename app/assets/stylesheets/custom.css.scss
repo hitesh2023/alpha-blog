@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+p {
+	color: white;
+} 
 #logo {
 	font-weight: bold;
 	float: left;
@@ -9,16 +12,50 @@
 	color: white;
 	letter-spacing: -1px;
 }
+.background-colour-grey {
+	background-image: asset-url('background-3.jpeg');
+	border-top: 1px solid white;
+}
+
+.navbar-item-custom {
+	font-weight: bold;
+	float: left;
+	margin-left: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: white;
+	letter-spacing: -0.5px;
+}
+
+.content-color {
+	color: black;
+}
+
 
 .center {
 	text-align: center
 }
 
 .jumbotron {
+	border-top: 1px solid white;
 	margin-top: 100px;
-	background-image: asset-url('download.jpeg');
+	background-image: asset-url('background-2.jpeg');
 	background-size: cover;
-	height: 700px;
+	height: 600px;
+}
+
+.color-white-bold {
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.color-white {
+	color: white;
+}
+.color-white-only-bold {
+	color: white;
+	font-weight: bold;
 }
 
 .btn-xlarge {
@@ -43,9 +80,15 @@
 }
 
 .footer {
-  padding: 10px 0;
-  margin-top: 120px;
-  height: 60px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 0px;
+
+  // padding: 10px 0;
+  // margin-top: 120px;
+  	height: 65px;
 }
 .footer a {
   color: white;
@@ -65,3 +108,10 @@
 	text-decoration: none;
 	color: white;
 }
+
+
+
+
+
+
+

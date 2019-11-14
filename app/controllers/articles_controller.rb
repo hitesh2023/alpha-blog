@@ -14,8 +14,10 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
-		if @article.save
-			flash[:notice] = "Article was successfully created"
+		if params[:commit] == "Back"
+			redirect_to articles_path
+		elsif @article.save
+			flash[:success] = "Article was successfully created"
 			redirect_to article_path(@article)
 		else
 			render 'new'
@@ -26,8 +28,10 @@ class ArticlesController < ApplicationController
 	end
 
 	def update
-		if @article.update(article_params)
-			flash[:notice] = "Article was successfully updated"
+		if params[:commit] == "Back"
+			redirect_to articles_path
+		elsif @article.update(article_params)
+			flash[:success] = "Article was successfully updated"
 			redirect_to article_path(@article)
 		else
 			render :edit
@@ -38,9 +42,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-		flash[:notice] = "Article was successfully destroyed"
+		flash[:danger] = "Article was successfully destroyed"
 		@article.destroy
-		redirect_to root_path 
+		redirect_to articles_path 
 	end
 
 	private 
