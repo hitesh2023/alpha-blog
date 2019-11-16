@@ -1,10 +1,18 @@
 
-<h1 align="center" class="color-white-bold">Listing all articles</h1>
+<h1 align="center" class="color-white-bold">LISTING ALL ARTICLES</h1>
 <br>
 <% @articles.each do |article| %>
 	<ul>
-		<li class="color-white-bold"><h4><%= article.title %></h4></li> <br/>
-
+		<li class="color-white-bold">
+			<h4 style="text-align:left;" class="uppercase">
+			    <%= article.title%> 				
+			    <span style="float:right;">
+			        <small class="color-white lowercase">
+						<%= article.user.username %> &nbsp; |  &nbsp; Updated  <%= time_ago_in_words(article.updated_at) %> AGO	
+					</small>
+			    </span>
+			</h4>
+		</li> 
 		<div class="well well-lg background-colour-grey">
 			<div class="color-white">
 				<p>

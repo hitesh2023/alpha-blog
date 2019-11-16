@@ -12,9 +12,19 @@ p {
 	color: white;
 	letter-spacing: -1px;
 }
+
 .background-colour-grey {
 	background-image: asset-url('background-3.jpeg');
 	border-top: 1px solid white;
+}
+
+.rcorners4 {
+  border-radius: 10px;
+  padding: 20px;
+  width: 230px;
+  height: 15px;
+  text-align: center;
+  background-image: asset-url('background-2.jpeg');
 }
 
 .navbar-item-custom {
@@ -48,7 +58,12 @@ p {
 .color-white-bold {
 	color: white;
 	font-weight: bold;
+}
+.uppercase {
 	text-transform: uppercase;
+}
+.lowecase {
+	text-transform: lowercase;	
 }
 .color-white {
 	color: white;
