@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
+		@article.user = User.first
 		if params[:commit] == "Back"
 			redirect_to articles_path
 		elsif @article.save
