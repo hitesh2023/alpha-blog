@@ -1,0 +1,10 @@
+<br>
+<div class="row">
+	<div class="color-white-bold col-md-4 col-md-offset-4 center">
+		<%= gravator_for @user, size: 195 %>
+	</div>
+</div>
+<h3 class="color-white-bold center"><%= @user.username %>'s articles</h3>
+<br>
+
+<%= render 'articles/article', obj: @user.articles %>

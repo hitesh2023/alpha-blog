@@ -1,31 +1,5 @@
 
 <h1 align="center" class="color-white-bold">LISTING ALL ARTICLES</h1>
 <br>
-<% @articles.each do |article| %>
-	<ul>
-		<li class="color-white-bold">
-			<h4 style="text-align:left;" class="uppercase">
-			    <%= article.title%> 				
-			    <span style="float:right;">
-			        <small class="color-white lowercase">
-						<%= article.user.username %> &nbsp; |  &nbsp; Updated  <%= time_ago_in_words(article.updated_at) %> AGO	
-					</small>
-			    </span>
-			</h4>
-		</li> 
-		<div class="well well-lg background-colour-grey">
-			<div class="color-white">
-				<p>
-					<%= truncate(article.description, length: 300)%>	
-				</p>
-			</div>
-			<div class="row">
-				<%= link_to 'View full Article', article_path(article), class: "btn btn-success btn-md col-md-2 col-sm-offset-1", role: "button" %>
-				<%= link_to 'Edit this Article', edit_article_path(article), class: "btn btn-warning btn-md col-md-2 col-sm-offset-2", role: "button" %>
-				<%= link_to 'Delete this Article', article_path(article), class: "btn btn-danger btn-md col-md-2 col-sm-offset-2", role: "button", method: :delete, data: {confirm: 'Are you sure?'}%>
-			</div>
-		</div>
-		<hr>
-		<br>
-	</ul>
-<%end%>
+
+<%= render 'articles/article', obj: @articles%>
