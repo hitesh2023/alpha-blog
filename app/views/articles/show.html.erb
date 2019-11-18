@@ -5,6 +5,13 @@
 		<%= @article.title%>
 	</h2>
 	<br>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 center">
+			<li>
+				<%= link_to gravator_for(@article.user), user_path(@article.user) %>
+			</li>
+		</div>			
+	</div>
 
 	<div class="color-white">
 		<h3>
