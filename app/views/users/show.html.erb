@@ -5,6 +5,8 @@
 	</div>
 </div>
 <h3 class="color-white-bold center"><%= @user.username %>'s articles</h3>
-<br>
+<div align="center">
+	<%= will_paginate @user_articles %>
+</div>
 
-<%= render 'articles/article', obj: @user.articles %>
+<%= render 'articles/article', obj: @user_articles %>

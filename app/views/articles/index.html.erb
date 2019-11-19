@@ -2,4 +2,13 @@
 <h1 align="center" class="color-white-bold">LISTING ALL ARTICLES</h1>
 <br>
 
-<%= render 'articles/article', obj: @articles%>
+<div align="center">
+	<%= will_paginate %>
+</div>
+
+<%= render 'articles/article', obj: @articles %>
+
+<div align="center">
+	<%= will_paginate %>
+</div>
+
