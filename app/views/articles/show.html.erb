@@ -22,7 +22,7 @@
 </div>
 <div class="row">
 	
-	<% if logged_in? && current_user == @article.user %>
+	<% if logged_in? && (current_user == @article.user || current_user.admin? ) %>
 		<%= link_to 'View all Articles', articles_path, class: "btn btn-success btn-lg col-lg-3", role: "button" %>
 		<%= link_to 'Edit this Article', edit_article_path(@article), class: "btn btn-warning btn-lg col-lg-4 col-sm-offset-1", role: "button" %>
 		<%= link_to 'Delete this Article', article_path, class: "btn btn-danger btn-lg col-lg-3 col-sm-offset-1", role: "button", method: :delete, data: {confirm: 'Are you sure?'}%>
