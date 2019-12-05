@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 100px;">
+	<h1 class="color-white-bold col-sm-offset-2">Create new Category</h1>
+	<br/>
+
+	<%= render 'shared/errors',obj: @category %>
+
+	<br/>
+
+	<div class="row">
+	    <div class="col-md-12">
+	        <%= form_for(@category, :html => {:class => "form-horizontal" , role: "form"}) do |t|%>
+	            <div class="form-group">
+	                <div class="col-sm-2 control-label color-white-bold">
+	                    <%= t.label :NAME %><br/>
+	                </div>
+	                <div class="col-sm-8">
+	                  <%= t.text_field :name, rows: 1, class: "form-control", placeholder: "Category name" %>    
+	                </div>
+	            </div>
+
+	            <div class="form-group">
+	                <div class="col-sm-10 col-sm-offset-2">
+	                    <%= t.submit class: "btn btn-primary btn-lg" %>    
+	                    <%= t.submit 'Back', class: "btn btn-danger btn-lg"%>    
+	                </div>
+	            </div>
+	        <% end %>
+	    </div>
+	</div>
+</div>

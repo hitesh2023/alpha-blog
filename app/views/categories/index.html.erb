@@ -1,0 +1,19 @@
+
+<h1 align="center" class="color-white-bold">LISTING ALL CATEGORIES</h1>
+<br>
+<br>
+
+<div align="center">
+	<% @categories.each do |category| %>
+		<ul class="listing">
+			<div class="row">
+				<div class="well col-md-4 col-md-offset-4 background-colour-grey">
+					<li class="color-white-bold">
+						<%= link_to "#{category.name}", category_path(category), style: "color: white; text-transform: uppercase; text-decoration: none;"%>
+					</li>
+				</div>
+			</div>
+		</ul>
+	<% end %>	
+</div>
+
