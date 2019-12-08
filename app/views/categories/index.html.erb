@@ -1,7 +1,6 @@
 
 <h1 align="center" class="color-white-bold">LISTING ALL CATEGORIES</h1>
-<br>
-<br>
+
 
 
 <div align="center">
@@ -23,6 +22,9 @@
 							<%= pluralize(category.articles.count, "article") %>
 						</small>
 					</li>
+					<% if logged_in? and current_user.admin? %>
+						<%= link_to 'Edit this Category', edit_category_path(category), class: "btn btn-warning btn-sm col-sm-4 col-sm-offset-4", role: "button" %>
+					<% end %>
 				</div>
 			</div>
 		</ul>
