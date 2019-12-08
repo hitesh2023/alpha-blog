@@ -17,6 +17,12 @@
 					<li class="color-white-bold">
 						<%= link_to "#{category.name}", category_path(category), style: "color: white; text-transform: uppercase; text-decoration: none;"%>
 					</li>
+
+					<li class="color-white-bold">
+						<small>
+							<%= pluralize(category.articles.count, "article") %>
+						</small>
+					</li>
 				</div>
 			</div>
 		</ul>

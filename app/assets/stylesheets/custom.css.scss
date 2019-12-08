@@ -13,6 +13,7 @@ p {
 	letter-spacing: -1px;
 }
 
+
 .background-colour-grey {
 	background-image: asset-url('background-3.jpeg');
 	border-top: 1px solid white;
@@ -22,6 +23,16 @@ p {
 	list-style: none;
 	padding-left: 0;
 }
+
+.badge {
+	background-image: asset-url('background-3.jpeg');
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: -0.5px;
+	font-weight: bold;
+}
+
+
 
 .rcorners4 {
   border-radius: 10px;

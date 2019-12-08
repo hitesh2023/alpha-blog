@@ -16,6 +16,11 @@
 					<%= truncate(article.description, length: 300)%>	
 				</p>
 			</div>
+			<% if article.categories.any? %>
+				<p>
+					Categories: <%= render article.categories %>
+				</p>
+			<% end %>
 			<% if logged_in? && (current_user == article.user || current_user.admin? ) %>
 				<div class="row">
 					<%= link_to 'View full Article', article_path(article), class: "btn btn-success btn-md col-md-2 col-sm-offset-1", role: "button" %>
